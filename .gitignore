@@ -1,0 +1,5 @@
+dist
+build
+node_modules
+yarn.lock
+create-angular-electron-app-commits.txt
