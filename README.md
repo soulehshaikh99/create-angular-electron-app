@@ -24,8 +24,8 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 ```cmd
 // Execute both the commands in seperate windows
 
-//Run first command and wait for the server to start and compile everything.
-//Run second command when compiling is done.
+// Run first command and wait for the server to start and compile everything.
+// Run second command when compiling is done.
 
 yarn start
 yarn run electron
