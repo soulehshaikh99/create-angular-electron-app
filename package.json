@@ -1,6 +1,7 @@
 {
   "name": "create-angular-electron-app",
   "version": "0.1.0",
+  "license": "MIT",
   "main": "main.js",
   "build": {
     "productName": "Angular and Electron App",
