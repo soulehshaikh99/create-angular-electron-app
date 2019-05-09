@@ -153,7 +153,15 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 ```
 
-**7) Move all dependencies to devDependencies as they are not needed in production build.
+**7) Add a period in base tag (href attribute) before slash in src/index.html**
+
+`<base href="./">`
+
+**8) Now change the outputPath in angular.json to build directory**
+
+`"outputPath": "build"`
+
+**9) Move all dependencies to devDependencies as they are not needed in production build.
 Your devDependencies section should look something like this**
 
 ```json
@@ -193,7 +201,7 @@ Your devDependencies section should look something like this**
 }
 ```
 
-**8) Add electron, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
+**10) Add electron, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
 
 ```json
 "scripts": {
@@ -209,7 +217,7 @@ Your devDependencies section should look something like this**
 }
 ```
 
-**9) Add the following configuration in package.json**
+**11) Add the following configuration in package.json**
 
 **Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
 ```json
