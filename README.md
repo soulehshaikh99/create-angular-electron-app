@@ -24,11 +24,14 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 ```cmd
 // Execute both the commands in seperate windows
 
-yarn start //Wait for the server to start and compile everything
-yarn run electron //Run this command when compiling is done
+//Run first command and wait for the server to start and compile everything.
+//Run second command when compiling is done.
+
+yarn start
+yarn run electron
     or
-npm start //Wait for the server to start and compile everything
-npm run electron //Run this command when compiling is done
+npm start
+npm run electron
 ```
 
 **2) For packaging app using electron-builder**
