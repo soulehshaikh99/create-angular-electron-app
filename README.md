@@ -204,7 +204,7 @@ Your devDependencies section should look something like this**
 }
 ```
 
-**10) Add electron, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
+**10) Edit build script and add electron, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
 
 ```json
 "scripts": {
