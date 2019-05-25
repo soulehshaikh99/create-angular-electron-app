@@ -4,14 +4,14 @@
 <h3>Use this boilerplate:</h3>
 
 ```cmd
-git clone https://github.com/soulehshaikh99/create-angular-electron-app.git
-cd create-angular-electron-app
+$ git clone https://github.com/soulehshaikh99/create-angular-electron-app.git
+$ cd create-angular-electron-app
 
-yarn install
-yarn global add @angular/cli electron electron-builder
+$ yarn install
+$ yarn global add @angular/cli electron electron-builder
     or
-npm install
-npm i -g @angular/cli electron electron-builder
+$ npm install
+$ npm i -g @angular/cli electron electron-builder
 ```
 
 **Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in preelectron-pack script.
@@ -27,19 +27,19 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 // Run first command and wait for the server to start and compile everything.
 // Run second command when compiling is done.
 
-yarn start
-yarn run electron
+$ yarn start
+$ yarn run electron
     or
-npm start
-npm run electron
+$ npm start
+$ npm run electron
 ```
 
 **2) For packaging app using electron-builder**
 
 ```cmd
-yarn run electron-pack
+$ yarn run electron-pack
         or
-npm run electron-pack
+$ npm run electron-pack
 ```
 
 <h3>Manual Setup using <a href="https://angular.io/cli">Angular CLI</a>(@angular/cli)</h3>
@@ -47,39 +47,39 @@ npm run electron-pack
 **1) Install Necessary Packages Globally**
 
 ```cmd
-yarn global add @angular/cli electron electron-builder
+$ yarn global add @angular/cli electron electron-builder
     or
-npm i -g @angular/cli electron electron-builder
+$ npm i -g @angular/cli electron electron-builder
 ```
 
 **2) Create New Angular App**
 
 ```cmd
-ng new create-angular-electron-app
+$ ng new create-angular-electron-app
 ```
 
 **3) Change directory to that project folder**
 
 ```cmd 
-cd create-angular-electron-app
+$ cd create-angular-electron-app
 ```
 
 **4) Install electron as development dependency**
 
 ```cmd 
-yarn add --dev electron
+$ yarn add --dev electron
             or
-npm i -D electron
+$ npm i -D electron
 ```
 
 **5) Create main.js file in root of project folder**
 
 ```cmd
 // Windows Users
-notepad.exe main.js
+$ notepad.exe main.js
 
 // Linux and macOS Users
-touch main.js
+$ touch main.js
 ```
 
 **6) Paste this code in main.js file**
