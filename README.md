@@ -1,3 +1,4 @@
+
 # Angular and Electron JS App
 > :rocket: :telescope: An easiest way to get started with the most popular blend of <a target="_blank" href="https://angular.io/">Angular<a/> and <a target="_blank" href="https://electronjs.org/">Electron JS</a> for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a target="_blank" href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
 
@@ -8,10 +9,10 @@ $ git clone https://github.com/soulehshaikh99/create-angular-electron-app.git
 $ cd create-angular-electron-app
 
 $ yarn install
-$ yarn global add @angular/cli electron electron-builder
+$ yarn global add @angular/cli electron-builder
     or
 $ npm install
-$ npm i -g @angular/cli electron electron-builder
+$ npm i -g @angular/cli electron-builder
 ```
 
 **Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in preelectron-pack script.
@@ -47,9 +48,9 @@ $ npm run electron-pack
 **1) Install Necessary Packages Globally**
 
 ```cmd
-$ yarn global add @angular/cli electron electron-builder
+$ yarn global add @angular/cli electron-builder
     or
-$ npm i -g @angular/cli electron electron-builder
+$ npm i -g @angular/cli electron-builder
 ```
 
 **2) Create New Angular App**
@@ -57,6 +58,20 @@ $ npm i -g @angular/cli electron electron-builder
 ```cmd
 $ ng new create-angular-electron-app
 ```
+
+**Important Note for Developers using Yarn:**
+As angular-cli uses npm package manager while creating the angular app, You need to run some extra commands.
+```cmd
+// Windows Users
+$ del package-lock.json
+$ rmdir /s /q node_modules
+$ yarn
+
+// Linux and macOS Users
+$ rm package-lock.json
+$ rm -r node_modules
+$ yarn
+ ```
 
 **3) Change directory to that project folder**
 
@@ -164,43 +179,46 @@ app.on('activate', function () {
 
 `"outputPath": "build"`
 
-**9) Move all dependencies to devDependencies as they are not needed in production build.
+**9) Now change the target in tsconfig.json from es2015 to es5**
+
+`"target": "es5"`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Read <a href="https://github.com/angular/angular/issues/30835#issuecomment-500028433" target="_blank">this</a> if you want to know the reason behind doing so. 
+
+**10) Move all dependencies to devDependencies as they are not needed in production build.
 Your devDependencies section should look something like this**
 
 ```json
-"devDependencies": {
-  "@angular-devkit/build-angular": "~0.13.0",
-  "@angular/animations": "~7.2.0",
-  "@angular/cli": "~7.3.9",
-  "@angular/common": "~7.2.0",
-  "@angular/compiler": "~7.2.0",
-  "@angular/compiler-cli": "~7.2.0",
-  "@angular/core": "~7.2.0",
-  "@angular/forms": "~7.2.0",
-  "@angular/language-service": "~7.2.0",
-  "@angular/platform-browser": "~7.2.0",
-  "@angular/platform-browser-dynamic": "~7.2.0",
-  "@angular/router": "~7.2.0",
-  "@types/jasmine": "~2.8.8",
-  "@types/jasminewd2": "~2.0.3",
-  "@types/node": "~8.9.4",
-  "codelyzer": "~4.5.0",
-  "core-js": "^2.5.4",
-  "electron": "^5.0.1",
-  "jasmine-core": "~2.99.1",
-  "jasmine-spec-reporter": "~4.2.1",
-  "karma": "~4.0.0",
-  "karma-chrome-launcher": "~2.2.0",
-  "karma-coverage-istanbul-reporter": "~2.0.1",
-  "karma-jasmine": "~1.1.2",
-  "karma-jasmine-html-reporter": "^0.2.2",
-  "protractor": "~5.4.0",
-  "rxjs": "~6.3.3",
-  "ts-node": "~7.0.0",
-  "tslib": "^1.9.0",
-  "tslint": "~5.11.0",
-  "typescript": "~3.2.2",
-  "zone.js": "~0.8.26"
+"devDependencies":{ 
+   "@angular-devkit/build-angular":"~0.803.4",
+   "@angular/animations":"~8.2.5",
+   "@angular/cli":"~8.3.4",
+   "@angular/common":"~8.2.5",
+   "@angular/compiler":"~8.2.5",
+   "@angular/compiler-cli":"~8.2.5",
+   "@angular/core":"~8.2.5",
+   "@angular/forms":"~8.2.5",
+   "@angular/language-service":"~8.2.5",
+   "@angular/platform-browser":"~8.2.5",
+   "@angular/platform-browser-dynamic":"~8.2.5",
+   "@angular/router":"~8.2.5",
+   "@types/jasmine":"~3.3.8",
+   "@types/jasminewd2":"~2.0.3",
+   "@types/node":"~8.9.4",
+   "codelyzer":"^5.0.0",
+   "electron":"^6.0.9",
+   "jasmine-core":"~3.4.0",
+   "jasmine-spec-reporter":"~4.2.1",
+   "karma":"~4.1.0",
+   "karma-chrome-launcher":"~2.2.0",
+   "karma-coverage-istanbul-reporter":"~2.0.1",
+   "karma-jasmine":"~2.0.1",
+   "karma-jasmine-html-reporter":"^1.4.0",
+   "protractor":"~5.4.0",
+   "rxjs":"~6.4.0",
+   "ts-node":"~7.0.0",
+   "tslib":"^1.10.0",
+   "tslint":"~5.15.0",
+   "typescript":"~3.5.3",
+   "zone.js":"~0.9.1"
 }
 ```
 
@@ -216,7 +234,7 @@ Your devDependencies section should look something like this**
   "e2e": "ng e2e",
   "electron": "electron .",
   "preelectron-pack": "yarn build",
-  "electron-pack": "build"
+  "electron-pack": "electron-builder"
 }
 ```
 
@@ -236,7 +254,7 @@ Your devDependencies section should look something like this**
 
 **Result**
 
-![Result](https://user-images.githubusercontent.com/39525716/57412119-489e8380-720d-11e9-9a2a-17b3073052c9.PNG)
+![Angular](https://user-images.githubusercontent.com/39525716/65078711-37376600-d9bb-11e9-80f8-df2e0e7cea7f.PNG)
 
 <h3>Made with :heart: from Souleh</h3>
 
