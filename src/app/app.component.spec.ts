@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('create-angular-electron-app');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to create-angular-electron-app!');
+    expect(compiled.querySelector('.content span').textContent).toContain('create-angular-electron-app app is running!');
   });
 });
