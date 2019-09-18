@@ -59,20 +59,6 @@ $ npm i -g @angular/cli electron-builder
 $ ng new create-angular-electron-app
 ```
 
-**Important Note for Developers using Yarn:**
-As angular-cli uses npm package manager while creating the angular app, You need to run some extra commands.
-```cmd
-// Windows Users
-$ del package-lock.json
-$ rmdir /s /q node_modules
-$ yarn
-
-// Linux and macOS Users
-$ rm package-lock.json
-$ rm -r node_modules
-$ yarn
- ```
-
 **3) Change directory to that project folder**
 
 ```cmd 
@@ -81,9 +67,22 @@ $ cd create-angular-electron-app
 
 **4) Install electron as development dependency**
 
-```cmd 
+**Yarn Specific:**
+As angular-cli uses npm package manager while creating the angular app, You need to run some extra commands.
+```cmd
+// Windows Users
+$ del package-lock.json
+$ rmdir /s /q node_modules
 $ yarn add --dev electron
-            or
+
+// Linux and macOS Users
+$ rm package-lock.json
+$ rm -r node_modules
+$ yarn add --dev electron
+ ```
+
+**NPM Specific:**
+```cmd
 $ npm i -D electron
 ```
 
