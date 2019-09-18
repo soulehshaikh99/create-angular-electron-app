@@ -1,4 +1,4 @@
-
+  
 # Angular and Electron JS App
 > :rocket: :telescope: An easiest way to get started with the most popular blend of <a target="_blank" href="https://angular.io/">Angular<a/> and <a target="_blank" href="https://electronjs.org/">Electron JS</a> for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a target="_blank" href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
 
@@ -8,10 +8,10 @@
 $ git clone https://github.com/soulehshaikh99/create-angular-electron-app.git
 $ cd create-angular-electron-app
 
-$ yarn install
+$ yarn
 $ yarn global add @angular/cli electron-builder
     or
-$ npm install
+$ npm
 $ npm i -g @angular/cli electron-builder
 ```
 
@@ -29,7 +29,7 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 // Run second command when compiling is done.
 
 $ yarn start
-$ yarn run electron
+$ yarn electron
     or
 $ npm start
 $ npm run electron
@@ -38,7 +38,7 @@ $ npm run electron
 **2) For packaging app using electron-builder**
 
 ```cmd
-$ yarn run electron-pack
+$ yarn electron-pack
         or
 $ npm run electron-pack
 ```
@@ -249,6 +249,49 @@ Your devDependencies section should look something like this**
     "main.js"
   ]
 }
+```
+
+**12) Project Dependencies Version Info**
+
+**Global Dependencies**
+```json
+"@angular/cli": "^8.3.4",
+"electron-builder": "^21.2.0"
+```
+
+**Local Dependencies**
+```json
+"@angular-devkit/build-angular": "~0.803.4",
+"@angular/animations": "~8.2.5",
+"@angular/cli": "~8.3.4",
+"@angular/common": "~8.2.5",
+"@angular/compiler": "~8.2.5",
+"@angular/compiler-cli": "~8.2.5",
+"@angular/core": "~8.2.5",
+"@angular/forms": "~8.2.5",
+"@angular/language-service": "~8.2.5",
+"@angular/platform-browser": "~8.2.5",
+"@angular/platform-browser-dynamic": "~8.2.5",
+"@angular/router": "~8.2.5",
+"@types/jasmine": "~3.3.8",
+"@types/jasminewd2": "~2.0.3",
+"@types/node": "~8.9.4",
+"codelyzer": "^5.0.0",
+"electron": "^6.0.9",
+"jasmine-core": "~3.4.0",
+"jasmine-spec-reporter": "~4.2.1",
+"karma": "~4.1.0",
+"karma-chrome-launcher": "~2.2.0",
+"karma-coverage-istanbul-reporter": "~2.0.1",
+"karma-jasmine": "~2.0.1",
+"karma-jasmine-html-reporter": "^1.4.0",
+"protractor": "~5.4.0",
+"rxjs": "~6.4.0",
+"ts-node": "~7.0.0",
+"tslib": "^1.10.0",
+"tslint": "~5.15.0",
+"typescript": "~3.5.3",
+"zone.js": "~0.9.1"
 ```
 
 **Result**
