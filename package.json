@@ -2,6 +2,8 @@
   "name": "create-angular-electron-app",
   "version": "0.2.0",
   "author": "Souleh Shaikh",
+  "description": "An easiest way to get started with the most robust blend of Vue and Electron JS for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using Electron Builder.",
+  "license": "MIT",
   "main": "main.js",
   "build": {
     "productName": "Angular and Electron App",
