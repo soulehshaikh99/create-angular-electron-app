@@ -44,3 +44,12 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Angular Distribution
+build
+
+# Electron Distribution
+dist
+
+# Project Build Automation Directory
+private
