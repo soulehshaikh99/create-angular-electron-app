@@ -26,7 +26,7 @@ function createWindow() {
       : path.join(__dirname, "build/assets/favicon.png"),
     // Use this in production mode.
     // icon: path.join(__dirname, 'build/assets/favicon.png'),
-    show: true,
+    show: false,
   });
 
   // This block of code is intended for development purpose only.
