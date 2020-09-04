@@ -86,14 +86,14 @@
     "css",
     "javascript",
     "angular",
+    "angular-app",
+    "ng-app",
     "typescript",
     "pwa",
     "electron",
     "electron-builder",
     "electron-serve",
     "concurrently",
-    "wait-on",
-    "web-framework",
-    "web-performance"
+    "wait-on"
   ]
 }
